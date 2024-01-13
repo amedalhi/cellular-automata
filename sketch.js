@@ -1,5 +1,18 @@
+// let ruleButton = document.getElementById('ruleValueBtn');
+// let value;
+
+// function preload(){
+
+//   ruleButton.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     let input = document.getElementById('ruleValueInput')  
+//     let value =  input.value;
+//     return value;
+//   });
+// }
+
 let cells = [];
-let ruleValue = 20
+let ruleValue = 110;
 let ruleSet;
 let w = 5; //width of each cell
 let y = 0;
@@ -19,23 +32,19 @@ function setup() {
   background(255);
 }
 
-console.log(ruleSet); 
-
 function draw() {
   for (let i = 0; i < cells.length; i++) {
-    let x = i * w;
+    let x = i * w; //sets x coord every w length
     noStroke();
-    fill(255 - cells[i] * 255);
+    fill(255 - cells[i] * 255); //sets cells = 1 to black, 0 to white
     square(x, y, w);
   }
 
-  y += w;
+  y += w; //sets next y coord to width
 
   let nextCells = [];
 
   let len = cells.length;
-  // nextCells[0] = cells[0];
-  // nextCells[cells.length - 1] = cells[cells.length];
   for (let i = 0; i < len; i++) {
     let left = cells[(i - 1 + len) % len];
     let right = cells[(i + 1) % len];
@@ -52,3 +61,4 @@ function calculateState(a, b, c) {
   let value = 7 - parseInt(neighborhood, 2);
   return parseInt(ruleSet[value]);
 }
+

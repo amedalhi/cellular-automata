@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CA Playground</title>
+    <link rel="stylesheet" href="styles.css">
     <script defer src="library/p5.min.js"></script>
     <script defer src="sketch.js"></script>
   </head>
   <body>
     <h1>Cellular Automata</h1>
+    <form>
+      <label for="ruleValue">Set Rule Value</label>
+      <input id="ruleValueInput" name="ruleValue" type="number" min="0" max="255" placeholder="Number between 0 to 255">
+      <button id="ruleValueBtn" type="submit">See Results</button>
+    </form>
   </body>
 </html>
