@@ -1,21 +1,25 @@
 let cells = [];
-let ruleValue = 149;
+let ruleValue = 20
 let ruleSet;
-let w = 4;
+let w = 5; //width of each cell
 let y = 0;
 
 function setup() {
   createCanvas(1000, 1000);
 
+  //convert ruleValue to binary and adds "0" to the left to make it 8 digits long if shorter
   ruleSet = ruleValue.toString(2).padStart(8, "0");
-  let total = width / w;
+  let total = width / w; //total number of cells
+  //initialize cells array
   for (let i = 0; i < total; i++) {
-    cells[i] = 0;
+    cells[i] = 0; //set all cells to 0
   }
 
-  cells[floor(total / 2)] = 1;
+  cells[floor(total / 2)] = 1; //set the middle cell to 1
   background(255);
 }
+
+console.log(ruleSet); 
 
 function draw() {
   for (let i = 0; i < cells.length; i++) {
