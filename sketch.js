@@ -5,7 +5,7 @@
 
 //   ruleButton.addEventListener('click', (e) => {
 //     e.preventDefault();
-//     let input = document.getElementById('ruleValueInput')  
+//     let input = document.getElementById('ruleValueInput')
 //     let value =  input.value;
 //     return value;
 //   });
@@ -61,4 +61,3 @@ function calculateState(a, b, c) {
   let value = 7 - parseInt(neighborhood, 2);
   return parseInt(ruleSet[value]);
 }
-
