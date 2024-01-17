@@ -1,16 +1,3 @@
-// let ruleButton = document.getElementById('ruleValueBtn');
-// let value;
-
-// function preload(){
-
-//   ruleButton.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     let input = document.getElementById('ruleValueInput')
-//     let value =  input.value;
-//     return value;
-//   });
-// }
-
 let cells = [];
 let ruleValue = 110;
 let ruleSet;
